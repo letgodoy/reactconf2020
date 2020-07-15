@@ -32,7 +32,6 @@ const ConferenceText = styled.div`
     text-shadow: 1px 1px 3px #111;
     background-color: rgba(0,0,0,0.7);
     padding: 30px;
-    border: 10px solid;
     margin-bottom: 50px;
     ${GradientBorder}
 

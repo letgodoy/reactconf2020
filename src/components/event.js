@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react"
 import styled from "styled-components"
-import { BiggerThanMedium, Colors } from './breakpoints'
+import { BiggerThanMedium, Colors, ButtonStyle } from './breakpoints'
 
 const EventStyle = styled.div`
     padding: 0;
@@ -18,12 +18,10 @@ const EventText = styled.div`
     padding: 1em;
 
 ${BiggerThanMedium} {
-    position: sticky;
-    position: -webkit-sticky;
-    top: 72px;
-    height: 375px;
-    font-size: 24px;
+    font-size: 50px;
     padding: 2em;
+    line-height: 70px;
+    text-align: center;
 }
 `
 
@@ -32,17 +30,12 @@ const EventContent = styled.div`
     padding: 2em;
 
     ${BiggerThanMedium} {
-        display: inline-flex;
-        flex-wrap: wrap;
-        margin-top: 200px;
-        justify-content: space-between;
+        margin-top: 100px;
+        margin-bottom: 100px;
     }
 `
 
 const EventTitle = styled.h2`
-    width: 100%;
-    flex: 1;
-    flex-basis: 100%;
     font-weight: 600;
     font-size: 35px;
     color: ${Colors.White};
@@ -50,22 +43,17 @@ const EventTitle = styled.h2`
 
     ${BiggerThanMedium} {
         font-size: 50px;
-        line-height: 2em;
+        line-height: 70px;
         text-align: center;
     }
 `
 
-const EventVideo = styled.div`
-    flex-basis: 100%;
-    color: ${Colors.BlackText};
-    text-align: justify;
-`
-
-const ServiceItemTitle = styled.div`
-    font-size: 16px;
-    text-transform: uppercase;
-    margin-top: 1em;
-    letter-spacing: 3px;
+const EventC2A = styled.div`
+    width: 100%;
+    text-align: center;
+    button {
+        ${ButtonStyle}
+    }
 `
 
 const Event = () => {
@@ -101,8 +89,10 @@ const Event = () => {
         <EventText>
             <p>21 de novembro de 2020</p>
             <p>Local: Aonde voce se sentir mais confortavel.</p>
-            <p>Seja um patrocinador</p>
         </EventText>
+        <EventC2A>
+            <button>Seja um patrocinador</button>
+        </EventC2A>
         <EventContent>
         <form onSubmit={sendEmail}>
               <p><input id="name" type="text" name="name" placeholder="Nome Completo" required /></p>

@@ -29,9 +29,27 @@ export const Colors = {
 }
 
 export const GradientBorder = `
-border-image-slice: 1;
+  border: 10px solid;
+  border-image-slice: 1;
   border-width: 3px;
   border-image-source: linear-gradient(to left, #743ad5, #d53a9d);
+`
+
+export const ButtonStyle = `
+    font-size: 16px;
+    text-transform: uppercase;
+    margin-top: 1em;
+    letter-spacing: 3px;
+    color: ${Colors.White};
+    padding: 1em 3em;
+    ${GradientBorder};
+    background: linear-gradient(to left, #743ad5, #d53a9d);
+    margin: auto;
+    text-align: center;
+
+    &:hover {
+        background: #111b;
+    }
 `
 
 // /* For desktop: */
