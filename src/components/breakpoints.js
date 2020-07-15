@@ -28,6 +28,12 @@ export const Colors = {
     LightYellow: '#fcf172'
 }
 
+export const GradientBorder = `
+border-image-slice: 1;
+  border-width: 3px;
+  border-image-source: linear-gradient(to left, #743ad5, #d53a9d);
+`
+
 // /* For desktop: */
 // .col-1 {width: 8.33%;}
 // .col-2 {width: 16.66%;}

@@ -4,45 +4,37 @@ import { BiggerThanMedium, Colors } from './breakpoints'
 
 const EventStyle = styled.div`
     padding: 0;
-    background-color: ${Colors.Black}; 
     display: flex;
     justify-content: center;
 `
 
 const Content = styled.div`
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
     width: 100vw;
-    max-width: 1200px;
+    max-width: 900px;
 `
 
 const EventText = styled.div`
-    background-color: ${Colors.Blue};
-    font-family: 'Montserrat', sans-serif; 
-    flex: 1;
+    color: ${Colors.White};
+    padding: 1em;
 
 ${BiggerThanMedium} {
-    flex: 2;
     position: sticky;
     position: -webkit-sticky;
     top: 72px;
     height: 375px;
     font-size: 24px;
-    padding-bottom: 10px;
+    padding: 2em;
 }
 `
 
 const EventContent = styled.div`
-    flex: 1;
-    background-color: ${Colors.White};
+    color: ${Colors.White};
     padding: 2em;
 
     ${BiggerThanMedium} {
-        flex: 2;
         display: inline-flex;
         flex-wrap: wrap;
-        margin-top: 100px;
+        margin-top: 200px;
         justify-content: space-between;
     }
 `
@@ -105,7 +97,7 @@ const Event = () => {
   
     return <EventStyle id="Event">
     <Content>
-        <EventTitle>Precisa de titulo?</EventTitle>
+        <EventTitle>React Conf BR 2020</EventTitle>
         <EventText>
             <p>21 de novembro de 2020</p>
             <p>Local: Aonde voce se sentir mais confortavel.</p>

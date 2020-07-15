@@ -1,51 +1,57 @@
 import React from "react"
 import styled from "styled-components"
-import { BiggerThanMedium, Colors } from './breakpoints'
+import { BiggerThanMedium, Colors, GradientBorder } from './breakpoints'
 
 const ConferenceVideo = styled.iframe`
-    width: 100%;
+    width: 30%;
     height: auto;
+  ${GradientBorder}
 `
 
 const ConferenceContent = styled.div`
+    width: 100%;
     flex: 1;
-    padding: 2em;
+    flex-basis: 100%;
     color: ${Colors.White};
+    margin-bottom: 50px;
 
     ${BiggerThanMedium} {
         display: flex;
         flex-wrap: wrap;
-        margin-top: 100px;
         justify-content: space-between;
     }
 `
 
 const ConferenceText = styled.div`
-    flex: 1;
-    flex-basis: 100%;
     color: ${Colors.White};
     height: auto;
     font-size: 14px;
-    padding: 2em;
     line-height: 1.8em;
     letter-spacing: 2px;
     text-align: justify;
+    text-shadow: 1px 1px 3px #111;
+    background-color: rgba(0,0,0,0.7);
+    padding: 30px;
+    border: 10px solid;
+    margin-bottom: 50px;
+    ${GradientBorder}
 
-${BiggerThanMedium} {
-    flex: 2;
-    padding: 3em;
-    position: sticky;
-    position: -webkit-sticky;
-    top: 72px;
-    font-size: 20px;
-}
+    p:last-child {
+        font-size: 12px;
+    }
+
+    ${BiggerThanMedium} {
+        font-size: 18px;
+        letter-spacing: 3px;
+
+        p:last-child {
+            font-size: 14px;
+        }
+    }
 `
 
 const ConferenceSubTitle = styled.h2`
-    width: 100%;
-    flex: 1;
-    flex-basis: 100%;
-    font-weight: 600;
+    font-weight: 400;
     font-size: 14px;
     color: ${Colors.White};
     text-align: center;
@@ -59,9 +65,6 @@ const ConferenceSubTitle = styled.h2`
 `
 
 const ConferenceTitle = styled.h2`
-    width: 100%;
-    flex: 1;
-    flex-basis: 100%;
     font-weight: 600;
     font-size: 30px;
     color: ${Colors.White};
@@ -74,16 +77,11 @@ const ConferenceTitle = styled.h2`
 `
 
 const Content = styled.div`
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
     width: 100vw;
-    max-width: 1200px;
+    max-width: 900px;
 `
 
 const ConferenceStyle = styled.div`
-    padding: 0;
-    background-color: ${Colors.Black}; 
     display: flex;
     justify-content: center;
 `
@@ -97,15 +95,9 @@ const Conference = () => <ConferenceStyle id="conference">
             <p>React Native, GraphQL, Apollo, Jest, Reason, Docz, Redux, Relay, Flow, RxJS, Styled Components, Router, Navigation, Enzyme, Node, TypeScript, Deno, Webpack, Wasm, Prepack, Storybook, Reselect, Sagas, Thunk, Next, Logics, Immutable, React VR, MobX, Mocha, CSSModules, JSS, Actionz, Redux Form, Flux, Nightwatch, Mocha, Ramda, Glamorous, Reflux, Observable, Inferno, Lodash, Isomorphic, SSR, Babel, Leaflet.</p>
         </ConferenceText>
         <ConferenceContent>
-            Como foi 2019
-            <ConferenceVideo title="aftermovie2019" src="https://www.youtube.com/embed/sx-6ZElybpU" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
-            </ConferenceVideo>
-            Como foi 2018
-            <ConferenceVideo title="aftermovie2018" src="https://www.youtube.com/embed/sx-6ZElybpU" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
-            </ConferenceVideo>
-            Como foi 2017
-            <ConferenceVideo title="aftermovie2017" src="https://www.youtube.com/embed/sx-6ZElybpU" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
-            </ConferenceVideo>
+            <ConferenceVideo title="aftermovie2019" src="https://www.youtube.com/embed/sx-6ZElybpU" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen />
+            <ConferenceVideo title="aftermovie2018" src="https://www.youtube.com/embed/sx-6ZElybpU" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen />
+            <ConferenceVideo title="aftermovie2017" src="https://www.youtube.com/embed/sx-6ZElybpU" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen />
         </ConferenceContent>
     </Content>
 </ConferenceStyle>

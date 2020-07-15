@@ -1,24 +1,15 @@
 import React from "react"
 import styled from "styled-components"
-import { BiggerThanMedium, Colors } from "./breakpoints"
-import backgroundWide from '../images/leaocolorido-wide2.jpg'
-import backgroundPort from '../images/leaocolorido-portrait.jpg'
+import { BiggerThanMedium } from "./breakpoints"
 
 const HomeStyle = styled.div`
-    height: calc(100vh - 6em);
-    background-color: ${Colors.White}; 
-    background-image: url(${backgroundPort});
+    height: 100vh;
     background-repeat: repeat; 
     background-position: center top; 
     background-size: cover;
     display: flex;
     justify-content: center;
     align-content: center;
-
-    ${BiggerThanMedium} {
-        background-image: url(${backgroundWide});
-        padding: 4em 2em 3em 2em;
-    }
 `
 
 const Content = styled.div`
@@ -26,18 +17,19 @@ const Content = styled.div`
     flex-wrap: wrap;
     flex-direction: column;
     width: 100%;
-    height: 100%;
     max-width: 960px;
     text-align: center;
     justify-content: center;
     align-items: center;
+    margin-top: 30px;
 
     iframe {
-        width: 100%;
+        max-width: 100%;
         height: 50%;
 
         ${BiggerThanMedium} {
-            height: 66%;
+            width: 100%;
+            height: 86%;
         }
     }
 `

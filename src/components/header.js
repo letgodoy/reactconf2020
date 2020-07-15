@@ -8,14 +8,15 @@ import menuIcon from '@iconify/icons-mdi/menu';
 const Menu = styled.header`
   transition: background-color .2s linear;
   z-index: 99 !important;
-  background-color: ${Colors.Black};
+  /* background-color: ${Colors.Black}; */
   width: 100vw;
   top: 0;
   position: fixed;
   display: flex;
 
   ${BiggerThanMedium} {
-    justify-content: center;
+    justify-content: end;
+    text-align: right;
   }
 `
 
@@ -25,12 +26,14 @@ const Navbar = styled.nav`
   display: flex;
   flex-wrap: wrap;
   flex-direction: column;
+  margin-left: auto;
 
   ${BiggerThanMedium} {
     width: auto;
     max-width: 1170px;
     display: inline-flex;
-    justify-content: center;
+    margin-left: auto;
+    margin-right: 30px;
     flex-direction: row;
   }
 `
@@ -40,7 +43,7 @@ const ListLinks = styled.div`
     display: ${({ isOpenMenu }) => isOpenMenu ? 'flex' : 'none'};
     flex-wrap: wrap;
     flex-direction: column;
-    justify-content: center;
+    justify-content: end;
     padding-left: 2em;
     width: fit-content;
 
@@ -49,7 +52,7 @@ const ListLinks = styled.div`
       list-style-type: none;
       flex-wrap: wrap;
       flex-direction: column;
-      justify-content: center;
+      justify-content: end;
       padding: 0;
     }
 
@@ -113,10 +116,8 @@ const Header = () => {
         <ul>
           <li><Link to="#home">Home</Link></li>
           <li><Link to="#conference">A Conf</Link></li>
-          <li><Link to="#event">O Evento</Link></li>
           <li><Link to="#about">C4P</Link></li>
           <li><Link to="#about">Patrocínio</Link></li>
-          <li><Link to="#about">A Comunindade</Link></li>
           <li><Link to="#contact">Contato</Link></li>
         </ul>
       </ListLinks>
