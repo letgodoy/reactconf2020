@@ -8,11 +8,13 @@ import whatsappIcon from '@iconify/icons-cib/whatsapp';
 const ContactStyle = styled.div`
     padding: 0;
     color: ${Colors.White};
+
 `
 
 const Content = styled.div`
     width: 100vw;
     max-width: 1200px;
+    margin: auto;
 `
 
 const ContactContent = styled.div`
@@ -40,10 +42,10 @@ margin: 30px;
 
 const Contact = () => <ContactStyle id="Contact">
     <Content>
-        <ContactTitle>Contato???</ContactTitle>
+        {/* <ContactTitle>Contato</ContactTitle> */}
         <ContactContent>
-            <Button href="mailto:reactconfbr@gmail.com">Enviar e-mail</Button>
-            <Button href="https://api.whatsapp.com/send?phone=5511952781145&text=Ol%C3%A1!%20Gostaria%20de%20falar%20sobre%20a%20React%20Conf%20Brasil">Enviar mensagem <Icon icon={whatsappIcon} /></Button>
+            <Button href="mailto:reactconfbr@gmail.com" target="_blank" rel="noreferrer">Enviar e-mail</Button>
+            <Button href="https://api.whatsapp.com/send?phone=5511952781145&text=Ol%C3%A1!%20Gostaria%20de%20falar%20sobre%20a%20React%20Conf%20Brasil" target="_blank" rel="noreferrer">Enviar mensagem <Icon icon={whatsappIcon} /></Button>
         </ContactContent>
     </Content>
 </ContactStyle>

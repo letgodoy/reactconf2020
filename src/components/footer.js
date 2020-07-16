@@ -5,16 +5,20 @@ import { Colors, BiggerThanMedium } from './breakpoints'
 // import { Icon } from '@iconify/react';
 
 const FooterStyle = styled.footer`
-    max-width: 100vw;
+    width: 100vw;
     background-color: ${Colors.Black};
     line-height: 28px;
     color: ${Colors.White};
-    display: flex;
-    text-align: center;
+    padding: 3em;
+`
+
+const Content = styled.div`
+max-width: 980px;
+margin: auto;
+display: flex;
     justify-content: center;
     flex-wrap: wrap;
     flex-direction: row;
-    padding: 3em;
 `
 
 const FooterColumn = styled.div`
@@ -27,21 +31,24 @@ const FooterColumn = styled.div`
 `
 
 const Footer = () => <FooterStyle>
+    <Content>
         <FooterColumn>
-            <p>#reactconfbr</p>
-            <p>React Brasil</p>
+            <p>#REACTCONFBR</p>
+            <p>REACT BRASIL</p>
             <p>Tradutor?</p>
         </FooterColumn>
         <FooterColumn>
-            <p>Compromisso</p>
+            <p>COMPROMISSO</p>
             <a href='https://github.com/nic/reactconf.com.br/raw/master/public/files/React_ManualConduta.pdf' target='_blank' rel="noreferrer">Código de conduta</a>
         </FooterColumn>
         <FooterColumn>
-            <p>Branding: Senai</p>
-            <p>Criado com Gatsby e Styled-components</p>
-            <p>Desenvolvidor com S2 por @letgodoy</p>
-            <p>React Conferences</p>
+            <p>Branding: <a href="https://informatica.sp.senai.br/" target='_blank' rel="noreferrer">Senai</a></p>
+            <p>Criado com <a href="https://www.gatsbyjs.org/" target='_blank' rel="noreferrer">Gatsby</a></p>
+            <p>Produçãp: Átomos Nativos</p>
+            <p>Desenvolvido com S2 por <a href="https://letgodoy.com" target='_blank' rel="noreferrer">@letgodoy</a></p>
+            <p><a href="https://facebook.github.io/react/community/conferences.html" target='_blank' rel="noreferrer">Conferences React</a></p>
         </FooterColumn>
+    </Content>
 </FooterStyle>
 
 export default Footer

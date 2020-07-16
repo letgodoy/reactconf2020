@@ -48,7 +48,7 @@ const Speaker = () => <SpeakerStyle id="Speaker">
     <Content>
         {/* <SpeakerTitle>Palestrantes</SpeakerTitle> */}
         <SpeakerContent>
-            <Button>quero ser um palestrante, download do pdf</Button>
+            <Button>Quero ser um palestrante</Button>
         </SpeakerContent>
     </Content>
 </SpeakerStyle>

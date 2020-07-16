@@ -23,6 +23,7 @@
     "styled-components": "^5.1.1"
   },
   "devDependencies": {
+    "@iconify/icons-bx": "^1.0.3",
     "@iconify/icons-cib": "^1.0.3",
     "@iconify/icons-mdi": "^1.0.116",
     "@iconify/react": "^1.1.3",

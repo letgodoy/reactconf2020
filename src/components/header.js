@@ -116,9 +116,9 @@ const Header = () => {
         <ul>
           <li><Link to="#home">Home</Link></li>
           <li><Link to="#conference">A Conf</Link></li>
-          <li><Link to="#about">C4P</Link></li>
-          <li><Link to="#about">Patrocínio</Link></li>
-          <li><Link to="#contact">Contato</Link></li>
+          <li><Link to="#Speaker">C4P</Link></li>
+          <li><Link to="#Sponsor">Patrocínio</Link></li>
+          <li><Link to="#Contact">Contato</Link></li>
         </ul>
       </ListLinks>
     </Navbar>

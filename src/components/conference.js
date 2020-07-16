@@ -3,7 +3,7 @@ import styled from "styled-components"
 import { BiggerThanMedium, Colors, GradientBorder } from './breakpoints'
 
 const ConferenceVideo = styled.iframe`
-    width: 30%;
+    width: 100%;
     height: auto;
   ${GradientBorder}
 `
@@ -16,9 +16,16 @@ const ConferenceContent = styled.div`
     margin-bottom: 50px;
 
     ${BiggerThanMedium} {
-        display: flex;
+        display: inline-flex;
         flex-wrap: wrap;
         justify-content: space-between;
+
+        div {
+            flex: 1;
+            flex-basis: 30%;
+            margin: 10px;
+            text-align: center;
+        }
     }
 `
 
@@ -94,9 +101,19 @@ const Conference = () => <ConferenceStyle id="conference">
             <p>React Native, GraphQL, Apollo, Jest, Reason, Docz, Redux, Relay, Flow, RxJS, Styled Components, Router, Navigation, Enzyme, Node, TypeScript, Deno, Webpack, Wasm, Prepack, Storybook, Reselect, Sagas, Thunk, Next, Logics, Immutable, React VR, MobX, Mocha, CSSModules, JSS, Actionz, Redux Form, Flux, Nightwatch, Mocha, Ramda, Glamorous, Reflux, Observable, Inferno, Lodash, Isomorphic, SSR, Babel, Leaflet.</p>
         </ConferenceText>
         <ConferenceContent>
-            <ConferenceVideo title="aftermovie2019" src="https://www.youtube.com/embed/sx-6ZElybpU" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen />
-            <ConferenceVideo title="aftermovie2018" src="https://www.youtube.com/embed/x9K78rfG3bo" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen />
-            <ConferenceVideo title="aftermovie2017" src="https://www.youtube.com/embed/N-vACHJypCM" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen />
+            <div>
+                <p>2019</p>
+                <ConferenceVideo title="aftermovie2019" src="https://www.youtube.com/embed/sx-6ZElybpU" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen />
+            </div>
+            <div>
+                <p>2018</p>
+                <ConferenceVideo title="aftermovie2018" src="https://www.youtube.com/embed/x9K78rfG3bo" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen />
+            </div>
+            <div>
+                <p>2019</p>
+                <ConferenceVideo title="aftermovie2017" src="https://www.youtube.com/embed/N-vACHJypCM" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen />
+            </div>
+
         </ConferenceContent>
     </Content>
 </ConferenceStyle>

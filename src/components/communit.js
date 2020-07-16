@@ -1,6 +1,13 @@
 import React from "react"
 import styled from "styled-components"
 import { BiggerThanMedium, Colors, ButtonStyle } from './breakpoints'
+import { MeetupList } from "./listsArrays"
+import { Icon } from '@iconify/react';
+import bxlSlack from '@iconify/icons-bx/bxl-slack';
+import bxlTwitter from '@iconify/icons-bx/bxl-twitter';
+import bxlGithub from '@iconify/icons-bx/bxl-github';
+import bxlFacebook from '@iconify/icons-bx/bxl-facebook';
+import bxlInstagram from '@iconify/icons-bx/bxl-instagram';
 
 const CommunitStyle = styled.div`
     padding: 0;
@@ -14,20 +21,19 @@ const Content = styled.div`
     max-width: 1200px;
 `
 
-
 const CommunitContent = styled.div`
     text-align: center;
+margin: 100px auto;
+    div {
+        margin: 100px auto;
+    }
 
     ${BiggerThanMedium} {
-        margin-top: 100px;
-        margin-bottom: 100px;
+        
     }
 `
 
 const CommunitTitle = styled.h2`
-    width: 100%;
-    flex: 1;
-    flex-basis: 100%;
     font-weight: 600;
     font-size: 35px;
     color: ${Colors.White};
@@ -40,17 +46,62 @@ const CommunitTitle = styled.h2`
     }
 `
 
+const SocialButton = styled.a`
+/* ${ButtonStyle}; */
+margin: 30px;
+color:  #743ad5;
+
+svg {
+    width: 50px;
+height: 50px;
+}
+
+`
+
 const Button = styled.a`
-${ButtonStyle}
+${ButtonStyle};
+margin: 10px;
+display: inline-flex;
+width: 70%;
+`
+
+const ListMeetups = styled.ol`
+    width: 100%;
+    margin: 0 auto 15px auto;
+    text-align: center;
+    list-style-type: none;
+    columns: 1;
+    column-gap: 10px;
+    padding: 0;
+
+    @media (min-width: 600px) {
+      columns: 2;
+    }
+
+    @media (min-width: 1000px) {
+      columns: 3;
+    }
 `
 
 const Communit = () => <CommunitStyle id="Communit">
     <Content>
         <CommunitTitle>Comunidade</CommunitTitle>
         <CommunitContent>
-            redes sociais
-            
-            meetups
+            <div>
+                <SocialButton href="https://react.now.sh/" target="_blank" rel="noreferrer"><Icon icon={bxlSlack} /></SocialButton>
+                <SocialButton href="http://twitter.com/reactconfbr" target="_blank" rel="noreferrer"><Icon icon={bxlTwitter} /></SocialButton>
+                <SocialButton href="https://github.com/react-brasil" target="_blank" rel="noreferrer"><Icon icon={bxlGithub} /></SocialButton>
+                <SocialButton href="https://www.facebook.com/reactconf/" target="_blank" rel="noreferrer"><Icon icon={bxlFacebook} /></SocialButton>
+                <SocialButton href="https://www.instagram.com/reactconfbr/" target="_blank" rel="noreferrer"><Icon icon={bxlInstagram} /></SocialButton>
+            </div>
+            <div>
+                <ListMeetups>
+                   {MeetupList.map((meetup, index) =>
+                    <li><Button key={index} href={meetup.link} target="_blank" rel="noreferrer">{meetup.name}</Button></li>
+                )} 
+                </ListMeetups>
+                
+            </div>
         </CommunitContent>
     </Content>
 </CommunitStyle>

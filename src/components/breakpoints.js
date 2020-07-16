@@ -39,13 +39,12 @@ export const GradientBorder = `
 export const ButtonStyle = `
     font-size: 16px;
     text-transform: uppercase;
-    margin-top: 1em;
+    margin: 2em auto;
     letter-spacing: 3px;
     color: ${Colors.White};
     padding: 1em 3em;
     ${GradientBorder};
     background: linear-gradient(to left, #743ad5, #d53a9d);
-    margin: auto;
     text-align: center;
 
     &:hover {
