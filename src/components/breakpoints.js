@@ -15,6 +15,7 @@ export const BiggerThanXLarge = '@media only screen and (min-width: 1200px)'
 
 export const Colors = {
     Black: '#111',
+    BlackTransp: '#111A',
     BlackText: '#424242',
     Pink: '#e71576',
     Yellow: '#FAEA27',

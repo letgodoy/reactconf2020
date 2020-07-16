@@ -1,6 +1,32 @@
 import React, { useState, useEffect } from "react"
 import styled from "styled-components"
-import { BiggerThanMedium, Colors, ButtonStyle } from './breakpoints'
+import { BiggerThanMedium, Colors, ButtonStyle, GradientBorder } from './breakpoints'
+
+const Form = styled.form`
+    text-align: center;
+    width: 80%;
+    margin: auto;
+
+    p {
+        width: 100%;
+    }
+
+    input {
+        font-size: 18px;
+        width: 80%;
+        background-color: ${Colors.BlackTransp};
+        ${GradientBorder};
+        color: ${Colors.White};
+        padding: 1em 2em;
+
+    }
+
+    input[type="submit"]{
+        width: 80%;
+        margin: auto;
+        ${ButtonStyle}
+    }
+`
 
 const EventStyle = styled.div`
     padding: 0;
@@ -94,7 +120,7 @@ const Event = () => {
             <button>Seja um patrocinador</button>
         </EventC2A>
         <EventContent>
-        <form onSubmit={sendEmail}>
+        <Form onSubmit={sendEmail}>
               <p><input id="name" type="text" name="name" placeholder="Nome Completo" required /></p>
               <p><input id="contact-email" type="email" name="email" placeholder="E-mail" required /></p>
               <p><input id="contact-email" type="phone" name="phone" placeholder="Celular" /></p>
@@ -102,7 +128,7 @@ const Event = () => {
               <p><input id="subject" type="text" name="slack" placeholder="Usuario no Slack" required /></p>
               <p><input id="subject" type="text" name="terms" placeholder="concorda com os termos link pros termos ou popup?" required /></p>
               <p><input type="submit" value={sendLabel} /></p>
-            </form>
+            </Form>
         </EventContent>
     </Content>
 </EventStyle>

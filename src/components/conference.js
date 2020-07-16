@@ -95,8 +95,8 @@ const Conference = () => <ConferenceStyle id="conference">
         </ConferenceText>
         <ConferenceContent>
             <ConferenceVideo title="aftermovie2019" src="https://www.youtube.com/embed/sx-6ZElybpU" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen />
-            <ConferenceVideo title="aftermovie2018" src="https://www.youtube.com/embed/sx-6ZElybpU" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen />
-            <ConferenceVideo title="aftermovie2017" src="https://www.youtube.com/embed/sx-6ZElybpU" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen />
+            <ConferenceVideo title="aftermovie2018" src="https://www.youtube.com/embed/x9K78rfG3bo" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen />
+            <ConferenceVideo title="aftermovie2017" src="https://www.youtube.com/embed/N-vACHJypCM" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen />
         </ConferenceContent>
     </Content>
 </ConferenceStyle>

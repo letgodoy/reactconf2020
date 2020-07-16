@@ -2,7 +2,7 @@ import React from "react"
 import styled from "styled-components"
 import { BiggerThanMedium, Colors, ButtonStyle } from './breakpoints'
 
-const SponsorStyle = styled.div`
+const CommunitStyle = styled.div`
     padding: 0;
     color: ${Colors.White}; 
     display: flex;
@@ -15,7 +15,7 @@ const Content = styled.div`
 `
 
 
-const SponsorContent = styled.div`
+const CommunitContent = styled.div`
     text-align: center;
 
     ${BiggerThanMedium} {
@@ -24,7 +24,7 @@ const SponsorContent = styled.div`
     }
 `
 
-const SponsorTitle = styled.h2`
+const CommunitTitle = styled.h2`
     width: 100%;
     flex: 1;
     flex-basis: 100%;
@@ -44,13 +44,15 @@ const Button = styled.a`
 ${ButtonStyle}
 `
 
-const Sponsor = () => <SponsorStyle id="Sponsor">
+const Communit = () => <CommunitStyle id="Communit">
     <Content>
-        <SponsorTitle>Patrocinadores</SponsorTitle>
-        <SponsorContent>
-            <Button href="mailto:reactconfbr@gmail.com">Quero ser um patrocinador</Button>
-        </SponsorContent>
+        <CommunitTitle>Comunidade</CommunitTitle>
+        <CommunitContent>
+            redes sociais
+            
+            meetups
+        </CommunitContent>
     </Content>
-</SponsorStyle>
+</CommunitStyle>
 
-export default Sponsor
+export default Communit
