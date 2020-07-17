@@ -1,7 +1,7 @@
 import React, { useState } from "react"
 import { Link } from "gatsby"
 import styled from "styled-components"
-import { BiggerThanMedium, Colors } from "./breakpoints"
+import { BiggerThanMedium } from "./breakpoints"
 import { Icon } from '@iconify/react';
 import menuIcon from '@iconify/icons-mdi/menu';
 import closeIcon from '@iconify/icons-mdi/close';

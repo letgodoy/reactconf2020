@@ -83,7 +83,7 @@ const Speaker = () => {
                 {!videoDisplay ? <Button onClick={() => setVideoDisplay(true)}>Quero ser um palestrante</Button> :
                     <>
                         <p><Icon icon={closeIcon} onClick={() => setVideoDisplay(false)} /></p>
-                        <iframe src="https://www.youtube.com/embed/5a_5QwpdTAU" frameBorder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
+                        <iframe title="manual" src="https://www.youtube.com/embed/5a_5QwpdTAU" frameBorder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
                         <div>
                             <ButtonLink href="https://reactconf.com.br/files/manual-c4p.pdf" target="_blank" rel="noopener">Download do manual</ButtonLink>
                             <ButtonLink href="mailto:c4p@reactconf.com.br" target="_blank" rel="noopener">Enviar e-mail</ButtonLink>
