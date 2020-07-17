@@ -63,7 +63,8 @@ const Button = styled.a`
 ${ButtonStyle};
 margin: 10px;
 display: inline-flex;
-width: 70%;
+width: 60%;
+font-size: small;
 `
 
 const ListMeetups = styled.ol`
@@ -98,7 +99,7 @@ const Communit = () => <CommunitStyle id="Communit">
             <div>
                 <ListMeetups>
                    {MeetupList.map((meetup, index) =>
-                    <li><Button key={index} href={meetup.link} target="_blank" rel="noreferrer">{meetup.name}</Button></li>
+                    <li key={index}><Button href={meetup.link} target="_blank" rel="noreferrer">{meetup.name}</Button></li>
                 )} 
                 </ListMeetups>
                 

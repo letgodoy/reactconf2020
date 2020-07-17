@@ -66,12 +66,6 @@ export const MeetupList = [
         link: 'https://www.meetup.com/pt-BR/React-Meetup-ES/',
       },
       {
-        id: 11,
-        name: 'Meetup Recife/PE',
-        city: 'Recife',
-        link: 'https://www.meetup.com/pt-BR/ReactJS-PE',
-      },
-      {
         id: 12,
         name: 'Meetup Juiz de Fora/MG',
         city: 'Juiz de Fora',

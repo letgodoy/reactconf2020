@@ -12,7 +12,7 @@ const ContactStyle = styled.div`
 `
 
 const Content = styled.div`
-    width: 100vw;
+    width: 100%;
     max-width: 1200px;
     margin: auto;
 `

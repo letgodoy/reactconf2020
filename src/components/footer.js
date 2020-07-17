@@ -5,17 +5,17 @@ import { Colors, BiggerThanMedium } from './breakpoints'
 // import { Icon } from '@iconify/react';
 
 const FooterStyle = styled.footer`
-    width: 100vw;
+    max-width: calc(100vw - 4em);
     background-color: ${Colors.Black};
     line-height: 28px;
     color: ${Colors.White};
-    padding: 3em;
+    padding: 2em;
 `
 
 const Content = styled.div`
-max-width: 980px;
-margin: auto;
-display: flex;
+    max-width: 980px;
+    margin: auto;
+    display: flex;
     justify-content: center;
     flex-wrap: wrap;
     flex-direction: row;
@@ -44,8 +44,7 @@ const Footer = () => <FooterStyle>
         <FooterColumn>
             <p>Branding: <a href="https://informatica.sp.senai.br/" target='_blank' rel="noreferrer">Senai</a></p>
             <p>Criado com <a href="https://www.gatsbyjs.org/" target='_blank' rel="noreferrer">Gatsby</a></p>
-            <p>Produçãp: Átomos Nativos</p>
-            <p>Desenvolvido com S2 por <a href="https://letgodoy.com" target='_blank' rel="noreferrer">@letgodoy</a></p>
+            <p>Produção: Átomos Nativos</p>
             <p><a href="https://facebook.github.io/react/community/conferences.html" target='_blank' rel="noreferrer">Conferences React</a></p>
         </FooterColumn>
     </Content>
