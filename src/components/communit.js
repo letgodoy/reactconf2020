@@ -1,6 +1,6 @@
 import React from "react"
 import styled from "styled-components"
-import { BiggerThanMedium, Colors, ButtonStyle } from './breakpoints'
+import { BiggerThanMedium, Colors, ButtonStyle, BiggerThanSmall, BiggerThanLarge } from './breakpoints'
 import { MeetupList } from "./listsArrays"
 import { Icon } from '@iconify/react';
 import bxlSlack from '@iconify/icons-bx/bxl-slack';
@@ -35,27 +35,36 @@ margin: 100px auto;
 
 const CommunitTitle = styled.h2`
     font-weight: 600;
-    font-size: 35px;
+    font-size: 28px;
     color: ${Colors.White};
     text-transform: uppercase;
+    text-align: center;
 
     ${BiggerThanMedium} {
         font-size: 50px;
         line-height: 2em;
-        text-align: center;
     }
 `
 
 const SocialButton = styled.a`
-margin: 30px;
-color:  #743ad5;
+    margin: 20px;
+    color:  #743ad5;
 
+    svg {
+        filter: drop-shadow(0 0 5px black);
+        width: 35px;
+        height: 35px;
+    }
 
-svg {
-    filter: drop-shadow(0 0 5px black);
-    width: 50px;
-height: 50px;
-}
+    ${BiggerThanMedium} {
+        margin: 30px;
+
+        svg {
+            width: 50px;
+            height: 50px;
+        }
+    }
+
 
 `
 
@@ -76,11 +85,11 @@ const ListMeetups = styled.ol`
     column-gap: 10px;
     padding: 0;
 
-    @media (min-width: 600px) {
+    ${BiggerThanSmall} {
       columns: 2;
     }
 
-    @media (min-width: 1000px) {
+    ${BiggerThanLarge} {
       columns: 3;
     }
 `
@@ -98,11 +107,11 @@ const Communit = () => <CommunitStyle id="Communit">
             </div>
             <div>
                 <ListMeetups>
-                   {MeetupList.map((meetup, index) =>
-                    <li key={index}><Button href={meetup.link} target="_blank" rel="noreferrer">{meetup.name}</Button></li>
-                )} 
+                    {MeetupList.map((meetup, index) =>
+                        <li key={index}><Button href={meetup.link} target="_blank" rel="noreferrer">{meetup.name}</Button></li>
+                    )}
                 </ListMeetups>
-                
+
             </div>
         </CommunitContent>
     </Content>

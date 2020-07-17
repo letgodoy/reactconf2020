@@ -10,24 +10,22 @@ const FooterStyle = styled.footer`
     line-height: 28px;
     color: ${Colors.White};
     padding: 2em;
+    display: flex;
+    justify-content: center;
 `
 
 const Content = styled.div`
+    width: 100%;
     max-width: 980px;
     margin: auto;
-    display: flex;
-    justify-content: center;
+    display: inline-flex;
+    justify-content: space-around;
     flex-wrap: wrap;
-    flex-direction: row;
 `
 
 const FooterColumn = styled.div`
-    flex: 1;
-    justify-content: center;
-    /* flex-basis: 100vw; */
     margin: 20px 5px;
     padding: 0;
-
 `
 
 const Footer = () => <FooterStyle>
@@ -35,11 +33,11 @@ const Footer = () => <FooterStyle>
         <FooterColumn>
             <p>#REACTCONFBR</p>
             <p>REACT BRASIL</p>
-            <p>Tradutor?</p>
+            {/* <p>Tradutor?</p> */}
         </FooterColumn>
         <FooterColumn>
             <p>COMPROMISSO</p>
-            <a href='https://github.com/nic/reactconf.com.br/raw/master/public/files/React_ManualConduta.pdf' target='_blank' rel="noreferrer">Código de conduta</a>
+            <p><a href='https://github.com/nic/reactconf.com.br/raw/master/public/files/React_ManualConduta.pdf' target='_blank' rel="noreferrer">Código de conduta</a></p>
         </FooterColumn>
         <FooterColumn>
             <p>Branding: <a href="https://informatica.sp.senai.br/" target='_blank' rel="noreferrer">Senai</a></p>

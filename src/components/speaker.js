@@ -9,6 +9,7 @@ const SpeakerStyle = styled.div`
     color: ${Colors.White}; 
     display: flex;
     justify-content: center;
+    margin-bottom: 40px;
 `
 
 const Content = styled.div`
@@ -69,6 +70,7 @@ ${ButtonStyle}
 const ButtonLink = styled.a`
 ${ButtonStyle}
 margin: 20px;
+display: inline-block;
 `
 
 const Speaker = () => {
@@ -80,10 +82,10 @@ const Speaker = () => {
             <SpeakerContent>
                 {!videoDisplay ? <Button onClick={() => setVideoDisplay(true)}>Quero ser um palestrante</Button> :
                     <>
-                    <p><Icon icon={closeIcon} onClick={() => setVideoDisplay(false)} /></p>
+                        <p><Icon icon={closeIcon} onClick={() => setVideoDisplay(false)} /></p>
                         <iframe src="https://www.youtube.com/embed/5a_5QwpdTAU" frameBorder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
                         <div>
-                            <ButtonLink href="https://reactconf.com.br/files/manual-c4p.pdf" target="_blank" rel="noopener">Download das instruções</ButtonLink>
+                            <ButtonLink href="https://reactconf.com.br/files/manual-c4p.pdf" target="_blank" rel="noopener">Download do manual</ButtonLink>
                             <ButtonLink href="mailto:c4p@reactconf.com.br" target="_blank" rel="noopener">Enviar e-mail</ButtonLink>
                         </div>
                     </>

@@ -14,6 +14,10 @@ background-size: cover;
 background-position: center;
 background-repeat: no-repeat;
 background-attachment: fixed;
+
+main {
+  padding: 20px;
+}
 `
 
 const Layout = ({ children }) => {
@@ -29,11 +33,11 @@ const Layout = ({ children }) => {
 
   return (
     <Body>
-      <Header siteTitle={data.site.siteMetadata.title} />
       <div>
         <main>{children}</main>
         <Footer />
       </div>
+      <Header siteTitle={data.site.siteMetadata.title} />
     </Body>
   )
 }

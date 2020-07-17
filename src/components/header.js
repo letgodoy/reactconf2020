@@ -4,11 +4,10 @@ import styled from "styled-components"
 import { BiggerThanMedium, Colors } from "./breakpoints"
 import { Icon } from '@iconify/react';
 import menuIcon from '@iconify/icons-mdi/menu';
+import closeIcon from '@iconify/icons-mdi/close';
 
 const Menu = styled.header`
   transition: background-color .2s linear;
-  z-index: 99 !important;
-  /* background-color: ${Colors.Black}; */
   width: 100vw;
   top: 0;
   position: fixed;
@@ -44,8 +43,13 @@ const ListLinks = styled.div`
     flex-wrap: wrap;
     flex-direction: column;
     justify-content: end;
-    padding-left: 2em;
+    padding-right: 2em;
     width: fit-content;
+    background-color: #111;
+    top: 50px;
+    right: 0;
+    position: absolute;
+    width: 100%;
 
     ul {
       display: ${({ isOpenMenu }) => isOpenMenu ? 'flex' : 'none'};
@@ -54,10 +58,13 @@ const ListLinks = styled.div`
       flex-direction: column;
       justify-content: end;
       padding: 0;
+      text-align: right;
     }
 
 
     ${BiggerThanMedium} {
+      position: inherit;
+      background: none;
       display: inline-flex;
       height: auto;
       padding: 0;
@@ -91,7 +98,7 @@ const ListLinks = styled.div`
 
 const MenuMobile = styled.div`
   flex: 1;
-  width: 100%;
+  /* width: 100%; */
   font-weight: 700;
   font-size: 30px;
   padding: 15px;
@@ -100,6 +107,7 @@ const MenuMobile = styled.div`
   cursor: pointer;
   text-align: right;
   margin-left: auto;
+  margin-right: 20px;
 
   ${BiggerThanMedium} {
     display: none;
@@ -111,13 +119,13 @@ const Header = () => {
 
   return <Menu>
     <Navbar>
-      <MenuMobile onClick={() => setIsOpenMenu(!isOpenMenu)}><Icon icon={menuIcon} /></MenuMobile>
+      <MenuMobile onClick={() => setIsOpenMenu(!isOpenMenu)}><Icon icon={isOpenMenu ? closeIcon : menuIcon} /></MenuMobile>
       <ListLinks isOpenMenu={isOpenMenu}>
         <ul>
           <li><Link to="#home">Home</Link></li>
           <li><Link to="#conference">A Conf</Link></li>
-          <li><Link to="#Speaker">C4P</Link></li>
-          <li><Link to="#Sponsor">Patrocínio</Link></li>
+          {/* <li><Link to="#Speaker">C4P</Link></li> */}
+          {/* <li><Link to="#Sponsor">Patrocínio</Link></li> */}
           <li><Link to="#Contact">Contato</Link></li>
         </ul>
       </ListLinks>

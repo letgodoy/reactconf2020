@@ -8,7 +8,6 @@ import whatsappIcon from '@iconify/icons-cib/whatsapp';
 const ContactStyle = styled.div`
     padding: 0;
     color: ${Colors.White};
-
 `
 
 const Content = styled.div`
@@ -24,20 +23,21 @@ const ContactContent = styled.div`
 
 const ContactTitle = styled.h2`
     font-weight: 600;
-    font-size: 35px;
+    font-size: 28px;
     color: ${Colors.White};
     text-transform: uppercase;
+    text-align: center;
 
     ${BiggerThanMedium} {
         font-size: 50px;
         line-height: 2em;
-        text-align: center;
     }
 `
 
 const Button = styled.a`
 ${ButtonStyle}
 margin: 30px;
+display: inline-block;
 `
 
 const Contact = () => <ContactStyle id="Contact">

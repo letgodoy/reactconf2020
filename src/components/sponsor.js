@@ -7,6 +7,7 @@ const SponsorStyle = styled.div`
     color: ${Colors.White}; 
     display: flex;
     justify-content: center;
+    margin-bottom: 40px;
 `
 
 const Content = styled.div`

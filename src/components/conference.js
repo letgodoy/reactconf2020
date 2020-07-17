@@ -14,6 +14,7 @@ const ConferenceContent = styled.div`
     flex-basis: 100%;
     color: ${Colors.White};
     margin-bottom: 50px;
+    text-align: center;
 
     ${BiggerThanMedium} {
         display: inline-flex;
