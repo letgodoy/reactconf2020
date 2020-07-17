@@ -105,7 +105,9 @@ const Event = () => {
     // }
 
     const getLocation = () => {
+        console.log("pegando localizacao")
         if (navigator.geolocation) {
+            console.log("tem geolocalizacao")
             navigator.geolocation.getCurrentPosition((position) => showPosition(position))
         } else {
             setLocation("Geolocation is not supported by this browser.")
@@ -114,27 +116,28 @@ const Event = () => {
 
     const showPosition = (position) => {
         console.log(position)
-        setLocation(
-           <> <iframe 
-  width="300" 
-  height="170" 
-  frameborder="0" 
-  scrolling="no" 
-  marginheight="0" 
-  marginwidth="0" 
-  src={`https://maps.google.com/maps?q=${position.coords.latitude},${position.coords.longitude}&hl=es&z=14&amp;output=embed`}
- >
- </iframe>
- <br />
- <small>
-   <a 
-    href={`https://maps.google.com/maps?q=${position.coords.latitude},${position.coords.longitude}&hl=es;z=14&amp;output=embed`}
-    style="color:#0000FF;text-align:left" 
-    target="_blank"
-   >
-     See map bigger
-   </a>
- </small> </>)
+        setLocation(`${position.coords.latitude},${position.coords.longitude}`)
+//         setLocation(
+//            <> <iframe 
+//   width="300" 
+//   height="170" 
+//   frameborder="0" 
+//   scrolling="no" 
+//   marginheight="0" 
+//   marginwidth="0" 
+//   src={`https://maps.google.com/maps?q=${position.coords.latitude},${position.coords.longitude}&hl=es&z=14&amp;output=embed`}
+//  >
+//  </iframe>
+//  <br />
+//  <small>
+//    <a 
+//     href={`https://maps.google.com/maps?q=${position.coords.latitude},${position.coords.longitude}&hl=es;z=14&amp;output=embed`}
+//     style="color:#0000FF;text-align:left" 
+//     target="_blank"
+//    >
+//      See map bigger
+//    </a>
+//  </small> </>)
     }
 
     return <EventStyle id="Event">
@@ -144,7 +147,26 @@ const Event = () => {
                 <p>21 de novembro de 2020</p>
                 <p>Local: Aonde voce se sentir mais confortavel.</p>
                 <button onClick={() => getLocation()}>ver localizacoa</button>
-                {location}
+                {location &&(<><iframe 
+  width="300" 
+  height="170" 
+  frameborder="0" 
+  scrolling="no" 
+  marginheight="0" 
+  marginwidth="0" 
+  src={`https://maps.google.com/maps?q=${location}&hl=es&z=14&amp;&output=embed`}
+ >
+ </iframe>
+ <br />
+ <small>
+   <a 
+    href={`https://maps.google.com/maps?q=${location}&hl=es;z=14&amp;&output=embed`}
+    // style="color:#0000FF;text-align:left" 
+    target="_blank"
+   >
+     See map bigger
+   </a>
+ </small></>)}
             </EventText>
             <EventContent>
                 <EventText>
