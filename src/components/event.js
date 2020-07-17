@@ -27,6 +27,11 @@ import { BiggerThanMedium, Colors, ButtonStyle, GradientBorder } from './breakpo
 //         ${ButtonStyle}
 //     }
 // `
+const ButtonSingup = styled.a`
+ width: 80%;
+         margin: auto;
+         ${ButtonStyle}
+`
 
 const EventStyle = styled.div`
     padding: 0;
@@ -74,18 +79,19 @@ const EventTitle = styled.h2`
 const Event = () => {
     // const [sendLabel, setSendLabel] = useState("Inscrever-se")
     // const [resultSend, setResultSend] = useState("")
-  
+    const [location, setLocation] = useState()
+
     // useEffect(() => {
     //     if (resultSend !== "") window.setTimeout(() => setResultSend(""), 2000)
     // }, [resultSend])
-  
+
     // const sendEmail = (e) => {
-  
+
     //   setSendLabel("Carregando ...")
     //   var service_id = "default_service";
     //   var template_id = "default";
     //   e.preventDefault();
-  
+
     // //   emailjs.sendForm(service_id, template_id, e.target, 'user_s5zmGRTCnbORHAz30rS2n')
     // //     .then((result) => {
     // //       console.log(result.text);
@@ -97,20 +103,54 @@ const Event = () => {
     // //       setSendLabel("Erro")
     // //     });
     // }
-  
+
+    const getLocation = () => {
+        if (navigator.geolocation) {
+            navigator.geolocation.getCurrentPosition((position) => showPosition(position))
+        } else {
+            setLocation("Geolocation is not supported by this browser.")
+        }
+    }
+
+    const showPosition = (position) => {
+        console.log(position)
+        setLocation(
+           <> <iframe 
+  width="300" 
+  height="170" 
+  frameborder="0" 
+  scrolling="no" 
+  marginheight="0" 
+  marginwidth="0" 
+  src={`https://maps.google.com/maps?q=${position.coords.latitude},${position.coords.longitude}&hl=es&z=14&amp;output=embed`}
+ >
+ </iframe>
+ <br />
+ <small>
+   <a 
+    href={`https://maps.google.com/maps?q=${position.coords.latitude},${position.coords.longitude}&hl=es;z=14&amp;output=embed`}
+    style="color:#0000FF;text-align:left" 
+    target="_blank"
+   >
+     See map bigger
+   </a>
+ </small> </>)
+    }
+
     return <EventStyle id="Event">
-    <Content>
-        <EventTitle>React Conf BR 2020</EventTitle>
-        <EventText>
-            <p>21 de novembro de 2020</p>
-            <p>Local: Aonde voce se sentir mais confortavel.</p>
-        </EventText>
-        <EventContent>
-        <EventText>
-            <p>Inscrições</p>
-            <p>01/08 12:00</p>
-        </EventText>
-        {/* <Form onSubmit={sendEmail}>
+        <Content>
+            <EventTitle>React Conf BR 2020</EventTitle>
+            <EventText>
+                <p>21 de novembro de 2020</p>
+                <p>Local: Aonde voce se sentir mais confortavel.</p>
+                <button onClick={() => getLocation()}>ver localizacoa</button>
+                {location}
+            </EventText>
+            <EventContent>
+                <EventText>
+                    <ButtonSingup href="https://www.sympla.com.br/react-conf-brasil-2020__910432" target="_blank" rel="noreferrer">Inscrever-se</ButtonSingup>
+                </EventText>
+                {/* <Form onSubmit={sendEmail}>
               <p><input id="name" type="text" name="name" placeholder="Nome Completo" required /></p>
               <p><input id="contact-email" type="email" name="email" placeholder="E-mail" required /></p>
               <p><input id="contact-email" type="phone" name="phone" placeholder="Celular" /></p>
@@ -119,9 +159,9 @@ const Event = () => {
               <p><input id="subject" type="text" name="terms" placeholder="concorda com os termos link pros termos ou popup?" required /></p>
               <p><input type="submit" value={sendLabel} /></p>
             </Form> */}
-        </EventContent>
-    </Content>
-</EventStyle>
+            </EventContent>
+        </Content>
+    </EventStyle>
 }
 
 export default Event

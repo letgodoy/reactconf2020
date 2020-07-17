@@ -110,7 +110,7 @@ const Conference = () => <ConferenceStyle id="conference">
                 <ConferenceVideo title="aftermovie2018" src="https://www.youtube.com/embed/x9K78rfG3bo" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen />
             </div>
             <div>
-                <p>2019</p>
+                <p>2017</p>
                 <ConferenceVideo title="aftermovie2017" src="https://www.youtube.com/embed/N-vACHJypCM" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen />
             </div>
 

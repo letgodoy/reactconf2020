@@ -42,7 +42,7 @@ margin: 30px;
 
 const Contact = () => <ContactStyle id="Contact">
     <Content>
-        {/* <ContactTitle>Contato</ContactTitle> */}
+        <ContactTitle>Contato</ContactTitle>
         <ContactContent>
             <Button href="mailto:reactconfbr@gmail.com" target="_blank" rel="noreferrer">Enviar e-mail</Button>
             <Button href="https://api.whatsapp.com/send?phone=5511952781145&text=Ol%C3%A1!%20Gostaria%20de%20falar%20sobre%20a%20React%20Conf%20Brasil" target="_blank" rel="noreferrer">Enviar mensagem <Icon icon={whatsappIcon} /></Button>

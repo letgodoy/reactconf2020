@@ -47,11 +47,12 @@ const CommunitTitle = styled.h2`
 `
 
 const SocialButton = styled.a`
-/* ${ButtonStyle}; */
 margin: 30px;
 color:  #743ad5;
 
+
 svg {
+    filter: drop-shadow(0 0 5px black);
     width: 50px;
 height: 50px;
 }
