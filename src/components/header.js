@@ -21,11 +21,7 @@ const Menu = styled.header`
 
 const Navbar = styled.nav`
   margin: 0;
-  width: calc(100vw - 50px);
-  display: flex;
-  flex-wrap: wrap;
-  flex-direction: column;
-  margin-left: auto;
+  width: 100vw;
 
   ${BiggerThanMedium} {
     width: auto;
@@ -49,7 +45,7 @@ const ListLinks = styled.div`
     top: 50px;
     right: 0;
     position: absolute;
-    width: 100%;
+    width: 90%;
 
     ul {
       display: ${({ isOpenMenu }) => isOpenMenu ? 'flex' : 'none'};
@@ -97,17 +93,14 @@ const ListLinks = styled.div`
 `
 
 const MenuMobile = styled.div`
-  flex: 1;
-  /* width: 100%; */
+  width: 85%;
   font-weight: 700;
   font-size: 30px;
-  padding: 15px;
+  margin: 15px;
   transition: color .2s linear;
   color: #fff;
   cursor: pointer;
   text-align: right;
-  margin-left: auto;
-  margin-right: 20px;
 
   ${BiggerThanMedium} {
     display: none;
